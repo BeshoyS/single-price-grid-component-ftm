@@ -1,0 +1,179 @@
+/* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+/* Global */
+:root {
+  --primary-cyan: rgb(42, 178, 175);
+  --primary-lightcyan: rgb(42, 190, 188);
+  --primary-briyellow: rgb(192, 223, 52);
+  --neural-lightgray: rgb(229, 239, 245);
+  --neural-grayblue: rgb(152, 166, 189);
+  --neural-white: rgb(255, 255, 255);
+  --font-family: "Karla", sans-serif;
+  --border-radius: 8px;
+  --card-shadow: 0px 8px 14px rgba(0, 0, 0, 0.1);
+  --btn-shadow: 0px 8px 14px rgba(0, 0, 0, 0.2);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--neural-lightgray);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h2 {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  font-weight: 400;
+}
+
+p {
+  font-size: 0.8rem;
+  line-height: 1.8;
+  font-weight: 300;
+  width: 90%;
+}
+
+/* Card */
+.card {
+  background-color: var(--neural-white);
+  width: 35rem;
+  border-radius: var(--border-radius);
+  -webkit-border-radius: var(--border-radius);
+  -moz-border-radius: var(--border-radius);
+  -ms-border-radius: var(--border-radius);
+  -o-border-radius: var(--border-radius);
+  box-shadow: var(--card-shadow);
+}
+
+/* Top Part */
+.top {
+  padding: 2rem;
+}
+
+.top h1 {
+  color: var(--primary-cyan);
+  font-size: 1.3rem;
+  margin-bottom: 1.3rem;
+}
+
+.top p {
+  color: var(--neural-grayblue);
+}
+
+.top .highlight {
+  color: var(--primary-briyellow);
+  font-weight: 700;
+  font-size: 1rem;
+  margin-bottom: 0.3rem;
+}
+
+/* Bottom Part */
+.bottom {
+  display: flex;
+  color: var(--neural-white);
+}
+
+.bottom > section {
+  width: 50%;
+  padding: 2rem;
+}
+
+/* Left part - Subscription */
+.subscription {
+  background-color: var(--primary-cyan);
+  border-bottom-left-radius: var(--border-radius);
+}
+
+.cost {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.cost h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-right: 0.8rem;
+  margin-bottom: 0;
+}
+
+.cost p {
+  font-size: 0.8rem;
+  font-weight: lighter;
+  color: var(--neural-lightgray);
+}
+
+.subscription > p {
+  font-size: 1rem;
+  margin-bottom: 1.2rem;
+}
+
+.subscription button {
+  background-color: var(--primary-briyellow);
+  color: var(--neural-white);
+  border: none;
+  width: 100%;
+  text-align: center;
+  padding: 1rem 2rem;
+  box-shadow: var(--btn-shadow);
+  border-radius: calc(var(--border-radius)/2);
+  -webkit-border-radius: calc(var(--border-radius)/2);
+  -moz-border-radius: calc(var(--border-radius)/2);
+  -ms-border-radius: calc(var(--border-radius)/2);
+  -o-border-radius: calc(var(--border-radius)/2);
+}
+
+/* Left part - why us */
+.why-us {
+  background-color: var(--primary-lightcyan);
+  border-bottom-right-radius: var(--border-radius);
+}
+
+.why-us p {
+  width: 85%;
+}
+
+@media screen and (max-width: 675px) {
+  /* Global */
+  body {
+    margin-top: 10%;
+    height: 100%;
+  }
+  p {
+    width: 98%;
+  }
+  /* Card */
+  .card {
+    width: 85%;
+    margin-bottom: 5rem;
+  }
+  /* Bottom Part */
+  .bottom {
+    flex-direction: column;
+  }
+
+  .bottom > section {
+    width: 100%;
+  }
+  /* Left part - Subscription */
+  .subscription {
+    border-bottom-left-radius: 0;
+  }
+  /* Left part - why us */
+  .why-us {
+    border-bottom-left-radius: var(--border-radius);
+  }
+
+  .why-us p {
+    width: 75%;
+  }
+}
